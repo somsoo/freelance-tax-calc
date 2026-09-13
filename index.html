@@ -5,8 +5,8 @@
   {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    "name": "프리랜서 종합소득세 절세 환급액 시뮬레이터 | 2026 최신 공식 기준",
-    "description": "프리랜서 종합소득세 절세 환급액 시뮬레이터 - 브라우저 100% 로컬 연산 및 실시간 결과 모의 시뮬레이터.",
+    "name": "3.3% 프리랜서 5월 종합소득세 환급액 계산기 | 2026 최신 단순경비율 기준",
+    "description": "2026년 최신 소득세법 및 단순경비율(업종별) 반영. 3.3% 기납부세액과 종합소득세 결정세액을 실시간 대조하여 5월 예상 환급액 및 추가납부세액을 계산합니다.",
     "url": "https://freelance-tax-calc.enjoy-onepage.com/",
     "applicationCategory": "FinanceApplication",
     "operatingSystem": "All",
@@ -21,13 +21,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>프리랜서 종합소득세 절세 환급액 시뮬레이터 | 2026 최신 공식 기준</title>
-  <meta name="description" content="프리랜서 종합소득세 절세 환급액 시뮬레이터 - 브라우저 100% 로컬 연산 및 실시간 결과 모의 시뮬레이터.">
+  <meta name="description" content="2026년 최신 단순경비율 및 기본공제 반영! 3.3% 원천징수 프리랜서의 5월 종합소득세 환급액 및 추가납부세액 실시간 정밀 시뮬레이터.">
+  <meta name="keywords" content="프리랜서 종합소득세 계산기, 3.3% 환급 계산기, 5월 종소세 환급금, 단순경비율, 프리랜서 절세, 삼쩜삼 환급">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://freelance-tax-calc.enjoy-onepage.com/">
+  
+  <!-- Open Graph / SNS -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://freelance-tax-calc.enjoy-onepage.com/">
+  <meta property="og:title" content="프리랜서 종합소득세 환급액 계산기 | 2026 최신 단순경비율 기준">
+  <meta property="og:description" content="5월에 얼마 환급받을까? 3.3% 원천징수액 vs 결정세액 실시간 대조!">
+  <meta property="og:image" content="https://freelance-tax-calc.enjoy-onepage.com/og-image.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://freelance-tax-calc.enjoy-onepage.com/">
+  <meta property="twitter:title" content="프리랜서 종합소득세 환급액 계산기 | 2026 최신 단순경비율 기준">
+  <meta property="twitter:description" content="5월에 얼마 환급받을까? 3.3% 원천징수액 vs 결정세액 실시간 대조!">
+  <meta property="twitter:image" content="https://freelance-tax-calc.enjoy-onepage.com/og-image.png">
+
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <script src="https://cdn.tailwindcss.com"></script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2228289204702106" crossorigin="anonymous"></script>
-  <link rel="alternate" type="application/rss+xml" title="프리랜서 종합소득세 절세 환급액 시뮬레이터 | 2026 최신 공식 기준 RSS Feed" href="https://freelance-tax-calc.enjoy-onepage.com/rss.xml" />
+  <link rel="alternate" type="application/rss+xml" title="프리랜서 종합소득세 절세 환급액 시뮬레이터 RSS Feed" href="https://freelance-tax-calc.enjoy-onepage.com/rss.xml" />
   <link rel="sitemap" type="application/xml" title="Sitemap" href="https://freelance-tax-calc.enjoy-onepage.com/sitemap.xml" />
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased font-sans min-h-screen flex flex-col justify-between">
@@ -35,18 +51,23 @@
   <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
     <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
       <a href="/" class="flex items-center gap-2 text-slate-900 font-bold text-lg hover:text-blue-600 transition">
-        <span class="w-8 h-8 rounded-lg bg-blue-600 text-white flex items-center justify-center font-black text-sm shadow-sm">도구</span>
-        <span>프리랜서 종합소득세 절세 환급액 시뮬레이터</span>
+        <span class="w-8 h-8 rounded-lg bg-blue-600 text-white flex items-center justify-center font-black text-sm shadow-sm">세금</span>
+        <span>프리랜서 종합소득세 환급 시뮬레이터</span>
       </a>
       <nav class="flex items-center gap-4 text-xs font-semibold text-slate-600">
-        <a href="/about.html" class="hover:text-blue-600">산출 공식</a>
-        <a href="/guides/guide1.html" class="hover:text-blue-600">실무 가이드</a>
+        <a href="/about.html" class="hover:text-blue-600">경비율 기준표</a>
+        <a href="/guides/guide1.html" class="hover:text-blue-600">절세 가이드</a>
         <a href="/privacy.html" class="hover:text-blue-600">개인정보처리</a>
       </nav>
     </div>
   </header>
 
   <main class="max-w-5xl mx-auto px-4 py-6 w-full flex-grow">
+    <div class="mb-4">
+      <h1 class="text-xl sm:text-2xl font-black text-slate-900">2026 프리랜서 5월 종합소득세 환급액 모의 계산기</h1>
+      <p class="text-xs sm:text-sm text-slate-600 mt-1">3.3% 사업소득 프리랜서 단순경비율·인적공제·세액공제 적용 5월 확정 예상 환급금(또는 추가납부세액) 정밀 산출</p>
+    </div>
+
     <!-- 상단 슬림 배너 -->
     <div class="manual-ad-box ad-top-banner" style="width: 100%; max-width: 960px; margin: 0 auto 20px; overflow: hidden; text-align: center; min-height: 50px; max-height: 90px;">
       <ins class="adsbygoogle"
@@ -65,27 +86,76 @@
         <div class="flex items-center justify-between border-b border-slate-100 pb-3">
           <h2 class="text-base font-bold text-slate-900 flex items-center gap-2">
             <span class="w-2 h-4 bg-blue-600 rounded-full"></span>
-            기본 정보 및 조건 입력
+            소득 및 공제 정보 입력
           </h2>
-          <span class="text-xs text-blue-600 bg-blue-50 px-2.5 py-1 rounded-full font-semibold">100% 로컬 연산</span>
+          <span class="text-xs text-blue-600 bg-blue-50 px-2.5 py-1 rounded-full font-semibold">2026년 세법 기준</span>
         </div>
 
+        <!-- 연간 총수입금액 -->
         <div>
-          <label class="block text-xs font-bold text-slate-600 mb-1.5">기준 금액 또는 대상 수치 입력</label>
-          <input type="number" id="inputVal1" class="w-full p-3 text-right font-bold text-lg border border-slate-200 bg-slate-50 focus:bg-white rounded-xl focus:ring-2 focus:ring-blue-500 outline-none transition" placeholder="1000000" value="1000000">
+          <label class="block text-xs font-bold text-slate-600 mb-1.5">1. 연간 총수입금액 (세전 3.3% 차감 전 수입)</label>
+          <div class="relative">
+            <input type="text" id="annualIncome" class="w-full p-3 text-right font-bold text-lg border border-slate-200 bg-slate-50 focus:bg-white rounded-xl focus:ring-2 focus:ring-blue-500 outline-none transition pr-10" placeholder="0" value="36,000,000">
+            <span class="absolute right-3.5 top-3.5 text-sm font-bold text-slate-500">원</span>
+          </div>
+          <div class="flex gap-1.5 mt-1.5 flex-wrap">
+            <button type="button" class="px-2 py-1 bg-slate-100 hover:bg-slate-200 text-slate-600 text-xs rounded font-medium add-inc-btn" data-add="5000000">+500만</button>
+            <button type="button" class="px-2 py-1 bg-slate-100 hover:bg-slate-200 text-slate-600 text-xs rounded font-medium add-inc-btn" data-add="10000000">+1천만</button>
+            <button type="button" class="px-2 py-1 bg-slate-100 hover:bg-slate-200 text-slate-600 text-xs rounded font-medium add-inc-btn" data-add="30000000">+3천만</button>
+          </div>
         </div>
 
+        <!-- 업종별 단순경비율 선택 -->
         <div>
-          <label class="block text-xs font-bold text-slate-600 mb-1.5">조건 및 분류 선택</label>
-          <select id="selectType" class="w-full p-3 font-semibold text-sm border border-slate-200 bg-slate-50 focus:bg-white rounded-xl focus:ring-2 focus:ring-blue-500 outline-none transition">
-            <option value="standard">일반 표준 조건 적용</option>
-            <option value="special">우대 및 특례 감면 조건</option>
-            <option value="advanced">심화 다중 복합 조건</option>
+          <label class="block text-xs font-bold text-slate-600 mb-1.5">2. 프리랜서 직종 (단순경비율)</label>
+          <select id="jobCategory" class="w-full p-3 font-semibold text-sm border border-slate-200 bg-slate-50 focus:bg-white rounded-xl focus:ring-2 focus:ring-blue-500 outline-none transition">
+            <option value="940909" selected>기타 자영업 / 외주 프리랜서 (64.1%)</option>
+            <option value="940100">작가 / 번역 / 작곡 / 프리랜서 기자 (58.7%)</option>
+            <option value="940911">소프트웨어 개발 / IT 외주 (64.1%)</option>
+            <option value="940304">배달대행 / 퀵서비스 라이더 (79.4%)</option>
+            <option value="940904">학원강사 / 과외교사 (61.7%)</option>
+            <option value="940903">학습지 방문지도사 (75.0%)</option>
+            <option value="940908">보험설계사 / 대출모집인 (68.6%)</option>
+            <option value="940500">유튜버 / 크리에이터 / 인플루언서 (64.1%)</option>
           </select>
+          <p class="text-xs text-slate-500 mt-1">* 신규 사업자 또는 직전 연도 수입 2,400만원 미만 시 단순경비율 100% 적용 대상입니다.</p>
+        </div>
+
+        <!-- 부양가족 수 (본인 포함) -->
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-bold text-slate-600 mb-1.5">본인 포함 부양가족 수</label>
+            <select id="dependentsCount" class="w-full p-3 font-semibold text-sm border border-slate-200 bg-slate-50 focus:bg-white rounded-xl focus:ring-2 focus:ring-blue-500 outline-none transition">
+              <option value="1" selected>1명 (본인 단독)</option>
+              <option value="2">2명 (본인 + 1인)</option>
+              <option value="3">3명 (본인 + 2인)</option>
+              <option value="4">4명 (본인 + 3인)</option>
+              <option value="5">5명 이상</option>
+            </select>
+            <span class="text-[11px] text-slate-400 mt-0.5 block">1인당 연 150만원 기본공제</span>
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-slate-600 mb-1.5">국민연금 납부액(연간)</label>
+            <div class="relative">
+              <input type="text" id="pensionPaid" class="w-full p-3 text-right font-bold text-sm border border-slate-200 bg-slate-50 focus:bg-white rounded-xl focus:ring-2 focus:ring-blue-500 outline-none transition pr-8" placeholder="0" value="1,000,000">
+              <span class="absolute right-3 top-3.5 text-xs text-slate-400">원</span>
+            </div>
+            <span class="text-[11px] text-slate-400 mt-0.5 block">전액 소득공제</span>
+          </div>
+        </div>
+
+        <!-- 노란우산공제 등 추가 소득공제 -->
+        <div>
+          <label class="block text-xs font-bold text-slate-600 mb-1.5">소기업·소상공인 공제부금(노란우산)</label>
+          <div class="relative">
+            <input type="text" id="yellowUmbrella" class="w-full p-3 text-right font-bold text-sm border border-slate-200 bg-slate-50 focus:bg-white rounded-xl focus:ring-2 focus:ring-blue-500 outline-none transition pr-8" placeholder="0" value="0">
+            <span class="absolute right-3 top-3.5 text-xs text-slate-400">원</span>
+          </div>
+          <span class="text-[11px] text-slate-400 mt-0.5 block">사업소득 4천만원 이하 시 최대 500만원 소득공제</span>
         </div>
 
         <button type="button" id="calcBtn" class="w-full py-3.5 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow-md transition text-sm">
-          실시간 시뮬레이션 계산 🚀
+          5월 종합소득세 환급액 계산하기 🚀
         </button>
       </section>
 
@@ -94,22 +164,41 @@
         <div class="flex items-center justify-between border-b border-slate-100 pb-3">
           <h2 class="text-base font-bold text-slate-900 flex items-center gap-2">
             <span class="w-2 h-4 bg-emerald-500 rounded-full"></span>
-            모의 산출 및 분석 결과
+            5월 종합소득세 확정 모의 결과
           </h2>
-          <span class="text-xs text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-full font-semibold">자동 갱신</span>
+          <span class="text-xs text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-full font-semibold">실시간 계산</span>
         </div>
 
         <div class="p-5 bg-gradient-to-br from-slate-900 to-slate-800 text-white rounded-xl text-center space-y-1">
-          <p class="text-xs text-slate-400 font-medium">최종 예상 산출 결과</p>
-          <div class="text-3xl font-black text-emerald-400" id="resultDisplay">1,250,000 원</div>
-          <p class="text-xs text-slate-300 mt-2">* 법정 최신 개정 규정에 따른 모의 견적입니다.</p>
+          <p class="text-xs text-slate-400 font-medium" id="resultStatusLabel">예상 5월 환급액 (국세 + 지방세)</p>
+          <div class="text-3xl font-black text-emerald-400" id="resultDisplay">+852,400 원 환급</div>
+          <p class="text-xs text-slate-300 mt-2" id="resultSubNote">기납부 3.3% 세액이 최종 결정세액보다 많아 전액 환급 대상입니다.</p>
         </div>
 
         <div class="space-y-2 text-xs text-slate-600 bg-slate-50 p-4 rounded-xl border border-slate-200">
-          <div class="flex justify-between"><span>기본 산정액:</span><span class="font-bold text-slate-800" id="resBase">1,000,000 원</span></div>
-          <div class="flex justify-between"><span>가산 및 조정액:</span><span class="font-bold text-blue-600" id="resAdjust">+250,000 원</span></div>
-          <div class="flex justify-between border-t border-slate-200 pt-1.5 font-bold text-slate-900"><span>합계 견적:</span><span id="resTotal">1,250,000 원</span></div>
+          <div class="flex justify-between"><span>연간 총수입금액:</span><span class="font-bold text-slate-800" id="resGrossIncome">36,000,000 원</span></div>
+          <div class="flex justify-between"><span>필요경비 인정액 (단순경비율):</span><span class="font-bold text-blue-600" id="resExpense">-23,076,000 원</span></div>
+          <div class="flex justify-between"><span>종합소득금액:</span><span class="font-bold text-slate-800" id="resIncomeAmount">12,924,000 원</span></div>
+          <div class="flex justify-between"><span>총 소득공제 (기본+연금 등):</span><span class="font-bold text-blue-600" id="resDeduction">-2,500,000 원</span></div>
+          <div class="flex justify-between border-t border-slate-200 pt-1.5"><span>과세표준:</span><span class="font-bold text-slate-900" id="resTaxBase">10,424,000 원</span></div>
+          <div class="flex justify-between"><span>산출세액 (기본세율 6% 적용):</span><span class="font-bold text-slate-800" id="resCalculatedTax">625,440 원</span></div>
+          <div class="flex justify-between"><span>표준세액공제:</span><span class="font-bold text-blue-600" id="resTaxCredit">-70,000 원</span></div>
+          <div class="flex justify-between font-bold text-slate-800"><span>최종 결정세액(소득세+지방세):</span><span id="resFinalTax">335,600 원</span></div>
+          <div class="flex justify-between border-t border-slate-200 pt-1.5 text-slate-500"><span>기납부 원천징수세액 (3.3%):</span><span class="font-bold text-slate-700" id="resWithheld">1,188,000 원</span></div>
+          <div class="flex justify-between border-t border-slate-200 pt-1.5 font-bold text-sm text-slate-900">
+            <span>5월 최종 정산액:</span>
+            <span class="text-emerald-600 text-base" id="resTotalRefund">852,400 원 환급</span>
+          </div>
         </div>
+
+        <div class="p-3 bg-emerald-50 text-emerald-900 rounded-xl text-xs space-y-1 leading-relaxed border border-emerald-100">
+          <p class="font-bold">💡 환급금 수령 팁:</p>
+          <p>5월 1일 ~ 5월 31일 홈택스 또는 손택스에서 종합소득세 정기신고를 완료하면, 통상 <strong>6월 말~7월 초</strong> 입력하신 환급 계좌로 국세 및 지방세가 분리 입금됩니다.</p>
+        </div>
+
+        <button type="button" onclick="copyResultToClipboard()" class="w-full py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-xl text-xs transition flex items-center justify-center gap-2">
+          <span>📋</span> 환급 견적 결과 복사하기
+        </button>
       </section>
     </div>
 
@@ -124,11 +213,35 @@
       <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     </div>
 
-    <!-- 하단 심화 안내 섹션 -->
-    <section class="bg-white rounded-2xl p-6 mt-6 border border-slate-200 shadow-sm space-y-3">
-      <h3 class="text-sm font-bold text-slate-900">💡 프리랜서 종합소득세 절세 환급액 시뮬레이터 공식 산출 안내 및 유의사항</h3>
-      <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
-        본 계산기는 사용자 브라우저 메모리 상에서 실시간으로 산출 수식을 모의 검증합니다. 개별적인 자격 요건이나 계약 특약에 따라 실제 결과와 차이가 발생할 수 있으므로 구체적인 사항은 공식 전문 가이드를 참고하시기 바랍니다.
+    <!-- 2026 종합소득세 세율 및 단순경비율 안내 -->
+    <section class="bg-white rounded-2xl p-6 mt-6 border border-slate-200 shadow-sm space-y-4">
+      <h3 class="text-sm font-bold text-slate-900 flex items-center gap-2">
+        <span>📊</span> 2026 종합소득세 기본세율 및 과세표준 구간
+      </h3>
+      <div class="overflow-x-auto">
+        <table class="w-full text-xs text-left border-collapse">
+          <thead>
+            <tr class="bg-slate-100 text-slate-700 border-b border-slate-200">
+              <th class="p-2.5 font-bold">과세표준 구간</th>
+              <th class="p-2.5 font-bold">세율</th>
+              <th class="p-2.5 font-bold">누진공제액</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100 text-slate-600">
+            <tr><td class="p-2.5">1,400만원 이하</td><td class="p-2.5 font-bold text-blue-600">6%</td><td class="p-2.5">0원</td></tr>
+            <tr><td class="p-2.5">1,400만원 초과 ~ 5,000만원 이하</td><td class="p-2.5 font-bold text-blue-600">15%</td><td class="p-2.5">126만원</td></tr>
+            <tr><td class="p-2.5">5,000만원 초과 ~ 8,800만원 이하</td><td class="p-2.5 font-bold text-blue-600">24%</td><td class="p-2.5">576만원</td></tr>
+            <tr><td class="p-2.5">8,800만원 초과 ~ 1억 5,000만원 이하</td><td class="p-2.5 font-bold text-blue-600">35%</td><td class="p-2.5">1,544만원</td></tr>
+            <tr><td class="p-2.5">1억 5,000만원 초과 ~ 3억원 이하</td><td class="p-2.5 font-bold text-blue-600">38%</td><td class="p-2.5">1,994만원</td></tr>
+            <tr><td class="p-2.5">3억원 초과 ~ 5억원 이하</td><td class="p-2.5 font-bold text-blue-600">40%</td><td class="p-2.5">2,594만원</td></tr>
+            <tr><td class="p-2.5">5억원 초과 ~ 10억원 이하</td><td class="p-2.5 font-bold text-blue-600">42%</td><td class="p-2.5">3,594만원</td></tr>
+            <tr><td class="p-2.5">10억원 초과</td><td class="p-2.5 font-bold text-blue-600">45%</td><td class="p-2.5">6,594만원</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-xs text-slate-500 leading-relaxed">
+        * 지방소득세는 소득세의 10%가 별도로 가산됩니다.<br>
+        * 본 계산기는 단순경비율 추계신고 대상자를 위한 모의 계산이며, 장부 기장(간편장부·복식부기) 및 세무대리인 선임 여부에 따라 실제 납부세액은 달라질 수 있습니다.
       </p>
     </section>
 
@@ -154,41 +267,192 @@
     <p>&copy; 2026 프리랜서 종합소득세 절세 환급액 시뮬레이터. All rights reserved.</p>
   </footer>
 
+  <!-- 100% 정밀 세법 환급 산출 로직 -->
   <script>
-    function updateCalc() {
-      const v = parseFloat(document.getElementById('inputVal1').value) || 0;
-      const type = document.getElementById('selectType').value;
-      let mult = 1.25;
-      if (type === 'special') mult = 1.15;
-      if (type === 'advanced') mult = 1.4;
-      const total = Math.round(v * mult);
-      const adj = total - v;
-      document.getElementById('resultDisplay').textContent = total.toLocaleString() + ' 원';
-      document.getElementById('resBase').textContent = Math.round(v).toLocaleString() + ' 원';
-      document.getElementById('resAdjust').textContent = (adj >= 0 ? '+' : '') + Math.round(adj).toLocaleString() + ' 원';
-      document.getElementById('resTotal').textContent = total.toLocaleString() + ' 원';
+    const EXPENSE_RATES = {
+      "940909": 0.641, // 기타 자영업 / 외주
+      "940100": 0.587, // 작가 / 번역 / 프리기자
+      "940911": 0.641, // IT 소프트웨어
+      "940304": 0.794, // 퀵서비스 / 배달
+      "940904": 0.617, // 학원강사
+      "940903": 0.750, // 학습지
+      "940908": 0.686, // 보험설계사
+      "940500": 0.641  // 크리에이터
+    };
+
+    function parseNum(val) {
+      if (!val) return 0;
+      const clean = String(val).replace(/[^0-9]/g, '');
+      return clean ? parseInt(clean, 10) : 0;
     }
-    document.getElementById('inputVal1').addEventListener('input', updateCalc);
-    document.getElementById('selectType').addEventListener('change', updateCalc);
-    document.getElementById('calcBtn').addEventListener('click', updateCalc);
-    updateCalc();
+
+    function formatKRW(num) {
+      return Number(num).toLocaleString('ko-KR') + ' 원';
+    }
+
+    function calculateTaxFromBase(taxBase) {
+      if (taxBase <= 0) return 0;
+      if (taxBase <= 14000000) {
+        return Math.floor(taxBase * 0.06);
+      } else if (taxBase <= 50000000) {
+        return Math.floor(taxBase * 0.15 - 1260000);
+      } else if (taxBase <= 88000000) {
+        return Math.floor(taxBase * 0.24 - 5760000);
+      } else if (taxBase <= 150000000) {
+        return Math.floor(taxBase * 0.35 - 15440000);
+      } else if (taxBase <= 300000000) {
+        return Math.floor(taxBase * 0.38 - 19940000);
+      } else if (taxBase <= 500000000) {
+        return Math.floor(taxBase * 0.40 - 25940000);
+      } else if (taxBase <= 1000000000) {
+        return Math.floor(taxBase * 0.42 - 35940000);
+      } else {
+        return Math.floor(taxBase * 0.45 - 65940000);
+      }
+    }
+
+    function calculateFreelanceTax() {
+      const grossIncome = parseNum(document.getElementById('annualIncome').value);
+      const jobCode = document.getElementById('jobCategory').value;
+      const depCount = parseInt(document.getElementById('dependentsCount').value, 10) || 1;
+      const pension = parseNum(document.getElementById('pensionPaid').value);
+      const yellow = parseNum(document.getElementById('yellowUmbrella').value);
+
+      // 1. 단순경비율 적용 필요경비
+      const expRate = EXPENSE_RATES[jobCode] || 0.641;
+      const expenses = Math.floor(grossIncome * expRate);
+
+      // 2. 종합소득금액
+      const incomeAmount = Math.max(0, grossIncome - expenses);
+
+      // 3. 소득공제 (기본공제 150만*인원수 + 국민연금 + 노란우산공제한도)
+      const basicDeduction = depCount * 1500000;
+      let yellowDeductionLimit = 5000000;
+      if (incomeAmount > 40000000 && incomeAmount <= 100000000) {
+        yellowDeductionLimit = 3000000;
+      } else if (incomeAmount > 100000000) {
+        yellowDeductionLimit = 2000000;
+      }
+      const actualYellow = Math.min(yellow, yellowDeductionLimit);
+      const totalDeductions = basicDeduction + pension + actualYellow;
+
+      // 4. 과세표준
+      const taxBase = Math.max(0, incomeAmount - totalDeductions);
+
+      // 5. 산출세액
+      const calculatedIncomeTax = calculateTaxFromBase(taxBase);
+
+      // 6. 세액공제 (표준세액공제 7만원 - 종합소득세 무기장/단순경비율 표준세액공제 7만원)
+      let taxCredit = 0;
+      if (calculatedIncomeTax > 0) {
+        taxCredit = Math.min(calculatedIncomeTax, 70000);
+      }
+      const finalIncomeTax = Math.max(0, calculatedIncomeTax - taxCredit);
+      const finalLocalTax = Math.floor(finalIncomeTax * 0.1);
+      const finalTotalTax = finalIncomeTax + finalLocalTax;
+
+      // 7. 기납부세액 (3.3% = 소득세 3% + 지방소득세 0.3%)
+      const withheldIncomeTax = Math.floor(grossIncome * 0.03);
+      const withheldLocalTax = Math.floor(grossIncome * 0.003);
+      const totalWithheld = withheldIncomeTax + withheldLocalTax;
+
+      // 8. 5월 최종 정산액 (기납부세액 - 최종결정세액)
+      // 양수면 환급, 음수면 추가 납부
+      const balance = totalWithheld - finalTotalTax;
+
+      // 9. DOM 바인딩
+      const resDisplay = document.getElementById('resultDisplay');
+      const resStatusLabel = document.getElementById('resultStatusLabel');
+      const resSubNote = document.getElementById('resultSubNote');
+
+      const resGrossIncome = document.getElementById('resGrossIncome');
+      const resExpense = document.getElementById('resExpense');
+      const resIncomeAmount = document.getElementById('resIncomeAmount');
+      const resDeduction = document.getElementById('resDeduction');
+      const resTaxBase = document.getElementById('resTaxBase');
+      const resCalculatedTax = document.getElementById('resCalculatedTax');
+      const resTaxCredit = document.getElementById('resTaxCredit');
+      const resFinalTax = document.getElementById('resFinalTax');
+      const resWithheld = document.getElementById('resWithheld');
+      const resTotalRefund = document.getElementById('resTotalRefund');
+
+      if (resGrossIncome) resGrossIncome.textContent = formatKRW(grossIncome);
+      if (resExpense) resExpense.textContent = '-' + formatKRW(expenses) + ` (${(expRate*100).toFixed(1)}%)`;
+      if (resIncomeAmount) resIncomeAmount.textContent = formatKRW(incomeAmount);
+      if (resDeduction) resDeduction.textContent = '-' + formatKRW(totalDeductions);
+      if (resTaxBase) resTaxBase.textContent = formatKRW(taxBase);
+      if (resCalculatedTax) resCalculatedTax.textContent = formatKRW(calculatedIncomeTax);
+      if (resTaxCredit) resTaxCredit.textContent = '-' + formatKRW(taxCredit);
+      if (resFinalTax) resFinalTax.textContent = formatKRW(finalTotalTax) + ` (국세 ${formatKRW(finalIncomeTax)} + 지방세 ${formatKRW(finalLocalTax)})`;
+      if (resWithheld) resWithheld.textContent = formatKRW(totalWithheld);
+
+      if (balance >= 0) {
+        if (resStatusLabel) resStatusLabel.textContent = '예상 5월 환급액 (국세 + 지방세)';
+        if (resDisplay) {
+          resDisplay.className = 'text-3xl font-black text-emerald-400';
+          resDisplay.textContent = '+' + formatKRW(balance) + ' 환급 🎉';
+        }
+        if (resSubNote) resSubNote.textContent = '기납부 3.3% 원천징수세액이 최종 결정세액보다 많아 환급받게 됩니다.';
+        if (resTotalRefund) {
+          resTotalRefund.className = 'text-emerald-600 text-base font-bold';
+          resTotalRefund.textContent = '+' + formatKRW(balance) + ' 환급';
+        }
+      } else {
+        const payAmount = Math.abs(balance);
+        if (resStatusLabel) resStatusLabel.textContent = '예상 5월 추가 납부세액';
+        if (resDisplay) {
+          resDisplay.className = 'text-3xl font-black text-rose-400';
+          resDisplay.textContent = '-' + formatKRW(payAmount) + ' 추가 납부 ⚠️';
+        }
+        if (resSubNote) resSubNote.textContent = '소득 및 과세표준 증가로 기납부세액보다 결정세액이 커 추가 납부해야 합니다.';
+        if (resTotalRefund) {
+          resTotalRefund.className = 'text-rose-600 text-base font-bold';
+          resTotalRefund.textContent = '-' + formatKRW(payAmount) + ' 추가 납부';
+        }
+      }
+    }
+
+    // Event listeners
+    ['annualIncome', 'pensionPaid', 'yellowUmbrella'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.addEventListener('input', calculateFreelanceTax);
+    });
+
+    ['jobCategory', 'dependentsCount'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.addEventListener('change', calculateFreelanceTax);
+    });
+
+    const calcBtnEl = document.getElementById('calcBtn');
+    if (calcBtnEl) calcBtnEl.addEventListener('click', calculateFreelanceTax);
+
+    // Quick add income buttons
+    document.querySelectorAll('.add-inc-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const addVal = parseInt(this.getAttribute('data-add'), 10) || 0;
+        const incEl = document.getElementById('annualIncome');
+        const current = parseNum(incEl.value);
+        incEl.value = Number(current + addVal).toLocaleString('ko-KR');
+        calculateFreelanceTax();
+      });
+    });
+
+    // Initialize
+    calculateFreelanceTax();
   </script>
 
-  <!-- Preemptive UX Helper: Auto comma formatting & Result sharing -->
+  <!-- Preemptive UX Helper: Non-destructive Auto comma formatting & Result sharing -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      // Auto comma on number/text inputs with currency hints
-      const moneyInputs = document.querySelectorAll('input[type="text"], input[type="number"], input[inputmode="numeric"]');
+      // Auto comma on currency inputs
+      const moneyInputs = [
+        document.getElementById('annualIncome'),
+        document.getElementById('pensionPaid'),
+        document.getElementById('yellowUmbrella')
+      ];
       moneyInputs.forEach(input => {
-        // Skip specific inputs like year, month, date, percent, id
-        const name = (input.name || input.id || '').toLowerCase();
-        if (name.includes('year') || name.includes('month') || name.includes('day') || name.includes('rate') || name.includes('percent') || name.includes('age') || name.includes('score')) {
-          return;
-        }
-        
-        // Listen to input
+        if (!input) return;
         input.addEventListener('input', function(e) {
-          if (this.type === 'number') return; // native number handles own UI
           let val = this.value.replace(/[^0-9]/g, '');
           if (val) {
             this.value = Number(val).toLocaleString('ko-KR');
@@ -196,18 +460,57 @@
         });
       });
 
-      // Inject Global Result Copy Function if not exists
-      window.copyResultToClipboard = function(textToCopy, customBtn) {
-        if (!textToCopy) {
-          const resEl = document.querySelector('#result, .result-box, [id*="result"], [class*="result"]');
-          textToCopy = resEl ? resEl.innerText.trim() : window.location.href;
+      // Inject Global Result Copy Function
+      window.copyResultToClipboard = function() {
+        const resDisplay = document.getElementById('resultDisplay');
+        const resGross = document.getElementById('resGrossIncome');
+        const resFinal = document.getElementById('resFinalTax');
+        const resWithheld = document.getElementById('resWithheld');
+
+        const textToCopy = `[2026 프리랜서 종합소득세 모의 환급 결과]
+` +
+          `- 연간 총수입: ${resGross ? resGross.textContent : ''}
+` +
+          `- 기납부 3.3% 원천징수: ${resWithheld ? resWithheld.textContent : ''}
+` +
+          `- 최종 결정세액: ${resFinal ? resFinal.textContent : ''}
+` +
+          `- 5월 정산 결과: ${resDisplay ? resDisplay.textContent : ''}
+
+` +
+          `👉 실시간 환급 계산기: ${window.location.href}`;
+
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(textToCopy).then(() => {
+            showToastNotification('환급 견적 결과가 클립보드에 복사되었습니다!');
+          }).catch(() => {
+            fallbackCopyText(textToCopy);
+          });
+        } else {
+          fallbackCopyText(textToCopy);
         }
-        navigator.clipboard.writeText(textToCopy + "\n\n👉 계산기 바로가기: " + window.location.href).then(() => {
-          showToastNotification('계산 결과가 클립보드에 복사되었습니다!');
-        }).catch(() => {
-          showToastNotification('복사되었습니다: ' + window.location.href);
-        });
       };
+
+      function fallbackCopyText(text) {
+        try {
+          const textArea = document.createElement('textarea');
+          textArea.value = text;
+          textArea.style.position = 'fixed';
+          textArea.style.left = '-9999px';
+          document.body.appendChild(textArea);
+          textArea.focus();
+          textArea.select();
+          const successful = document.execCommand('copy');
+          document.body.removeChild(textArea);
+          if (successful) {
+            showToastNotification('환급 견적 결과가 복사되었습니다!');
+          } else {
+            showToastNotification('복사에 실패했습니다.');
+          }
+        } catch (err) {
+          showToastNotification('복사에 실패했습니다.');
+        }
+      }
 
       function showToastNotification(msg) {
         let toast = document.getElementById('global-ux-toast');
