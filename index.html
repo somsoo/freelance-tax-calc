@@ -3,21 +3,57 @@
 <html lang="ko">
 <head>
 <link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/><script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "3.3% 프리랜서 5월 종합소득세 환급액 계산기 | 2026 최신 단순경비율 기준",
-    "description": "2026년 최신 소득세법 및 단순경비율(업종별) 반영. 3.3% 기납부세액과 종합소득세 결정세액을 실시간 대조하여 5월 예상 환급액 및 추가납부세액을 계산합니다.",
-    "url": "https://freelance-tax-calc.enjoy-onepage.com/",
-    "applicationCategory": "FinanceApplication",
-    "operatingSystem": "All",
-    "browserRequirements": "Requires JavaScript. Requires HTML5.",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "KRW"
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "@id": "https://freelance-tax-calc.enjoy-onepage.com/#webapp",
+      "name": "2026 프리랜서 5월 종합소득세 환급액 모의 계산기",
+      "url": "https://freelance-tax-calc.enjoy-onepage.com/",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "All",
+      "browserRequirements": "Requires JavaScript. Requires HTML5.",
+      "description": "2026년 최신 단순경비율 및 기본공제 반영! 3.3% 원천징수 프리랜서의 5월 종합소득세 환급액 및 추가납부세액 실시간 정밀 시뮬레이터.",
+      "image": "https://freelance-tax-calc.enjoy-onepage.com/og-image.png",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "KRW"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://freelance-tax-calc.enjoy-onepage.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "작년에 수입이 없었는데도 올해 5월에 신고해야 하나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "소득이 0원이면 의무는 없지만, 소득이 없다는 사실을 증명(소득금액증명원 '0원')해야 건강보험료 감면이나 정부 지원금 신청이 가능합니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "신용카드 사용액은 프리랜서 소득공제가 되나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "근로소득자와 달리 프리랜서는 개인 신용카드 사용액 소득공제가 불가하며, 사업과 직접 관련된 지출만 필요경비로 인정받습니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "세무 대행(Ssem, 삼쩜삼, 세무사) 수수료를 아끼는 방법은?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "홈택스 '모두채움 서비스' 대상자는 ARS 전화 한 통으로 1분 만에 무료 자가 신고가 가능합니다."
+          }
+        }
+      ]
     }
-  }
+  ]
+}
   </script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
