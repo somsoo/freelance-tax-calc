@@ -2,6 +2,11 @@
 
 <html lang="ko">
 <head>
+    <!-- Performance Optimization: Resource Preconnect -->
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://pagead2.googlesyndication.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
 <link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/><script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -97,7 +102,18 @@
     max-width: 100% !important;
     overflow: hidden !important;
   }
-</style>
+
+        /* U3 Accessibility: Global Keyboard Focus Ring Standard */
+        :focus-visible {
+            outline: 2px solid #3b82f6 !important;
+            outline-offset: 2px !important;
+        }
+        input:focus-visible, select:focus-visible, textarea:focus-visible, button:focus-visible {
+            outline: 2px solid #2563eb !important;
+            outline-offset: 1px !important;
+        }
+    
+    </style>
 <meta content="summary_large_image" name="twitter:card"/><meta content="프리랜서 종합소득세 환급액 계산기 | 2026 최신 단순경비율 기준" name="twitter:title"/><meta content="5월에 얼마 환급받을까? 3.3% 원천징수액 vs 결정세액 실시간 대조!" name="twitter:description"/><meta content="https://freelance-tax-calc.enjoy-onepage.com/og-image.png" name="twitter:image"/></head>
 <body class="bg-slate-50 text-slate-800 antialiased font-sans min-h-screen flex flex-col justify-between">
 <!-- 상단 슬림 띠배너 (헤더 직하단: 50~60px 슬림형) -->
@@ -139,7 +155,7 @@
 <div>
 <label class="block text-xs font-bold text-slate-600 mb-1.5">1. 연간 총수입금액 (세전 3.3% 차감 전 수입)</label>
 <div class="relative">
-<input class="w-full p-3 text-right font-bold text-lg border border-slate-200 bg-slate-50 focus:bg-white rounded-xl focus:ring-2 focus:ring-blue-500 outline-none transition pr-10" id="annualIncome" placeholder="0" type="text" value="36,000,000"/>
+<input class="w-full p-3 text-right font-bold text-lg border border-slate-200 bg-slate-50 focus:bg-white rounded-xl focus:ring-2 focus:ring-blue-500 outline-none transition pr-10" id="annualIncome" placeholder="0" type="text" value="36,000,000" aria-label="0" />
 <span class="absolute right-3.5 top-3.5 text-sm font-bold text-slate-500">원</span>
 </div>
 <div class="flex gap-1.5 mt-1.5 flex-wrap">
@@ -151,7 +167,7 @@
 <!-- 업종별 단순경비율 선택 -->
 <div>
 <label class="block text-xs font-bold text-slate-600 mb-1.5">2. 프리랜서 직종 (단순경비율)</label>
-<select class="w-full p-3 font-semibold text-sm border border-slate-200 bg-slate-50 focus:bg-white rounded-xl focus:ring-2 focus:ring-blue-500 outline-none transition" id="jobCategory">
+<select class="w-full p-3 font-semibold text-sm border border-slate-200 bg-slate-50 focus:bg-white rounded-xl focus:ring-2 focus:ring-blue-500 outline-none transition" id="jobCategory" aria-label="jobCategory">
 <option selected="" value="940909">기타 자영업 / 외주 프리랜서 (64.1%)</option>
 <option value="940100">작가 / 번역 / 작곡 / 프리랜서 기자 (58.7%)</option>
 <option value="940911">소프트웨어 개발 / IT 외주 (64.1%)</option>
@@ -167,7 +183,7 @@
 <div class="grid grid-cols-2 gap-3">
 <div>
 <label class="block text-xs font-bold text-slate-600 mb-1.5">본인 포함 부양가족 수</label>
-<select class="w-full p-3 font-semibold text-sm border border-slate-200 bg-slate-50 focus:bg-white rounded-xl focus:ring-2 focus:ring-blue-500 outline-none transition" id="dependentsCount">
+<select class="w-full p-3 font-semibold text-sm border border-slate-200 bg-slate-50 focus:bg-white rounded-xl focus:ring-2 focus:ring-blue-500 outline-none transition" id="dependentsCount" aria-label="dependentsCount">
 <option selected="" value="1">1명 (본인 단독)</option>
 <option value="2">2명 (본인 + 1인)</option>
 <option value="3">3명 (본인 + 2인)</option>
@@ -179,7 +195,7 @@
 <div>
 <label class="block text-xs font-bold text-slate-600 mb-1.5">국민연금 납부액(연간)</label>
 <div class="relative">
-<input class="w-full p-3 text-right font-bold text-sm border border-slate-200 bg-slate-50 focus:bg-white rounded-xl focus:ring-2 focus:ring-blue-500 outline-none transition pr-8" id="pensionPaid" placeholder="0" type="text" value="1,000,000"/>
+<input class="w-full p-3 text-right font-bold text-sm border border-slate-200 bg-slate-50 focus:bg-white rounded-xl focus:ring-2 focus:ring-blue-500 outline-none transition pr-8" id="pensionPaid" placeholder="0" type="text" value="1,000,000" aria-label="0" />
 <span class="absolute right-3 top-3.5 text-xs text-slate-400">원</span>
 </div>
 <span class="text-[11px] text-slate-400 mt-0.5 block">전액 소득공제</span>
@@ -189,7 +205,7 @@
 <div>
 <label class="block text-xs font-bold text-slate-600 mb-1.5">소기업·소상공인 공제부금(노란우산)</label>
 <div class="relative">
-<input class="w-full p-3 text-right font-bold text-sm border border-slate-200 bg-slate-50 focus:bg-white rounded-xl focus:ring-2 focus:ring-blue-500 outline-none transition pr-8" id="yellowUmbrella" placeholder="0" type="text" value="0"/>
+<input class="w-full p-3 text-right font-bold text-sm border border-slate-200 bg-slate-50 focus:bg-white rounded-xl focus:ring-2 focus:ring-blue-500 outline-none transition pr-8" id="yellowUmbrella" placeholder="0" type="text" value="0" aria-label="0" />
 <span class="absolute right-3 top-3.5 text-xs text-slate-400">원</span>
 </div>
 <span class="text-[11px] text-slate-400 mt-0.5 block">사업소득 4천만원 이하 시 최대 500만원 소득공제</span>
