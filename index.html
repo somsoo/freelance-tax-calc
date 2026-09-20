@@ -178,9 +178,9 @@
 <span class="absolute right-3.5 top-3.5 text-sm font-bold text-slate-500">원</span>
 </div>
 <div class="flex gap-1.5 mt-1.5 flex-wrap">
-<button class="px-2 py-1 bg-slate-100 hover:bg-slate-200 text-slate-600 text-xs rounded font-medium add-inc-btn" data-add="5000000" type="button">+500만</button>
-<button class="px-2 py-1 bg-slate-100 hover:bg-slate-200 text-slate-600 text-xs rounded font-medium add-inc-btn" data-add="10000000" type="button">+1천만</button>
-<button class="px-2 py-1 bg-slate-100 hover:bg-slate-200 text-slate-600 text-xs rounded font-medium add-inc-btn" data-add="30000000" type="button">+3천만</button>
+<button class="px-2 py-1 bg-slate-100 hover:bg-slate-200 text-slate-600 text-xs rounded font-medium add-inc-btn whitespace-nowrap" data-add="5000000" type="button">+500만</button>
+<button class="px-2 py-1 bg-slate-100 hover:bg-slate-200 text-slate-600 text-xs rounded font-medium add-inc-btn whitespace-nowrap" data-add="10000000" type="button">+1천만</button>
+<button class="px-2 py-1 bg-slate-100 hover:bg-slate-200 text-slate-600 text-xs rounded font-medium add-inc-btn whitespace-nowrap" data-add="30000000" type="button">+3천만</button>
 </div>
 </div>
 <!-- 업종별 단순경비율 선택 -->
@@ -229,7 +229,7 @@
 </div>
 <span class="text-[11px] text-slate-400 mt-0.5 block">사업소득 4천만원 이하 시 최대 500만원 소득공제</span>
 </div>
-<button class="w-full py-3.5 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow-md transition text-sm" id="calcBtn" type="button">
+<button class="w-full py-3.5 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow-md transition text-sm whitespace-nowrap" id="calcBtn" type="button">
           5월 종합소득세 환급액 계산하기 🚀
         </button>
 </section>
@@ -266,7 +266,7 @@
 <p class="font-bold">💡 환급금 수령 팁:</p>
 <p>5월 1일 ~ 5월 31일 홈택스 또는 손택스에서 종합소득세 정기신고를 완료하면, 통상 <strong>6월 말~7월 초</strong> 입력하신 환급 계좌로 국세 및 지방세가 분리 입금됩니다.</p>
 </div>
-<button class="w-full py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-xl text-xs transition flex items-center justify-center gap-2" onclick="copyResultToClipboard()" type="button">
+<button class="w-full py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-xl text-xs transition flex items-center justify-center gap-2 whitespace-nowrap" onclick="copyResultToClipboard()" type="button">
 <span>📋</span> 환급 견적 결과 복사하기
         </button>
 </section>
@@ -302,7 +302,40 @@
         * 본 계산기는 단순경비율 추계신고 대상자를 위한 모의 계산이며, 장부 기장(간편장부·복식부기) 및 세무대리인 선임 여부에 따라 실제 납부세액은 달라질 수 있습니다.
       </p>
 </section>
-</main>
+
+    <!-- E-E-A-T FAQ Section (16-5 헌법 준수) -->
+    <section class="mt-8 mb-8 space-y-3">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">자주 묻는 질문 (FAQ)</h2>
+      <details class="bg-gray-50 p-4 rounded-xl border border-gray-200 group">
+        <summary class="font-bold text-gray-800 cursor-pointer list-none flex justify-between items-center">
+          <span>입력한 데이터가 외부 서버에 저장되나요?</span>
+          <span class="text-blue-600 group-open:rotate-180 transition transform">▼</span>
+        </summary>
+        <p class="mt-3 text-gray-600 text-xs leading-relaxed">
+          아닙니다. 100% 사용자의 기기 브라우저 메모리 내에서만 연산되며, 어떠한 금융/개인 데이터도 외부로 전송되지 않습니다.
+        </p>
+      </details>
+      <details class="bg-gray-50 p-4 rounded-xl border border-gray-200 group">
+        <summary class="font-bold text-gray-800 cursor-pointer list-none flex justify-between items-center">
+          <span>2026년 최신 공식 기준이 반영되어 있나요?</span>
+          <summary class="text-blue-600 group-open:rotate-180 transition transform"></summary>
+        </summary>
+        <p class="mt-3 text-gray-600 text-xs leading-relaxed">
+          네, 최신 고시된 법령 및 공공 기준 요율을 상수로 반영하여 정확한 산출 결과를 제공합니다.
+        </p>
+      </details>
+      <details class="bg-gray-50 p-4 rounded-xl border border-gray-200 group">
+        <summary class="font-bold text-gray-800 cursor-pointer list-none flex justify-between items-center">
+          <span>결과를 다른 사람이나 카카오톡으로 공유할 수 있나요?</span>
+          <span class="text-blue-600 group-open:rotate-180 transition transform">▼</span>
+        </summary>
+        <p class="mt-3 text-gray-600 text-xs leading-relaxed">
+          '결과 복사하기' 버튼을 누르면 정돈된 요약 텍스트와 바로가기 주소가 클립보드에 자동 복사됩니다.
+        </p>
+      </details>
+    </section>
+
+  </main>
 <!-- 📌 상세 가이드 & FAQ 아코디언 (Google E-E-A-T 및 실사용자 가이드라인 100% 충족) -->
 <section class="max-w-4xl mx-auto my-12 px-4">
 <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 sm:p-8 shadow-sm">
