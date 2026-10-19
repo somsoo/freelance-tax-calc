@@ -62,7 +62,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>프리랜서 종합소득세 절세 환급액 시뮬레이터</title>
-<meta content="2026년 최신 단순경비율 및 기본공제 반영!" name="description"/>
+<meta content="2026년 최신 단순경비율과 기본공제를 반영하여 3.3% 프리랜서 5월 종합소득세 환급액을 계산하세요." name="description"/>
 <meta content="프리랜서 종합소득세 계산기, 3.3% 환급 계산기, 5월 종소세 환급금, 단순경비율, 프리랜서 절세, 삼쩜삼 환급" name="keywords"/>
 <meta content="index, follow" name="robots"/>
 <link href="https://freelance-tax-calc.enjoy-onepage.com/" rel="canonical"/>
@@ -192,7 +192,7 @@
 <div>
 <label class="block text-xs font-bold text-slate-600 mb-1.5">1. 연간 총수입금액 (세전 3.3% 차감 전 수입)</label>
 <div class="relative">
-<input class="w-full p-3 text-right font-bold text-lg border border-slate-200 bg-slate-50 focus:bg-white rounded-xl focus:ring-2 focus:ring-blue-500 outline-none transition pr-10" id="annualIncome" placeholder="0" type="text" value="36,000,000" aria-label="0" />
+<input class="w-full p-3 text-right font-bold text-lg border border-slate-200 bg-slate-50 focus:bg-white rounded-xl focus:ring-2 focus:ring-blue-500 outline-none transition pr-10" id="annualIncome" inputmode="numeric" placeholder="0" type="text" value="36,000,000" aria-label="0" />
 <span class="absolute right-3.5 top-3.5 text-sm font-bold text-slate-500">원</span>
 </div>
 <div class="flex gap-1.5 mt-1.5 flex-wrap">
@@ -232,7 +232,7 @@
 <div>
 <label class="block text-xs font-bold text-slate-600 mb-1.5">국민연금 납부액(연간)</label>
 <div class="relative">
-<input class="w-full p-3 text-right font-bold text-sm border border-slate-200 bg-slate-50 focus:bg-white rounded-xl focus:ring-2 focus:ring-blue-500 outline-none transition pr-8" id="pensionPaid" placeholder="0" type="text" value="1,000,000" aria-label="0" />
+<input class="w-full p-3 text-right font-bold text-sm border border-slate-200 bg-slate-50 focus:bg-white rounded-xl focus:ring-2 focus:ring-blue-500 outline-none transition pr-8" id="pensionPaid" inputmode="numeric" placeholder="0" type="text" value="1,000,000" aria-label="0" />
 <span class="absolute right-3 top-3.5 text-xs text-slate-400">원</span>
 </div>
 <span class="text-[11px] text-slate-400 mt-0.5 block">전액 소득공제</span>
@@ -242,7 +242,7 @@
 <div>
 <label class="block text-xs font-bold text-slate-600 mb-1.5">소기업·소상공인 공제부금(노란우산)</label>
 <div class="relative">
-<input class="w-full p-3 text-right font-bold text-sm border border-slate-200 bg-slate-50 focus:bg-white rounded-xl focus:ring-2 focus:ring-blue-500 outline-none transition pr-8" id="yellowUmbrella" placeholder="0" type="text" value="0" aria-label="0" />
+<input class="w-full p-3 text-right font-bold text-sm border border-slate-200 bg-slate-50 focus:bg-white rounded-xl focus:ring-2 focus:ring-blue-500 outline-none transition pr-8" id="yellowUmbrella" inputmode="numeric" placeholder="0" type="text" value="0" aria-label="0" />
 <span class="absolute right-3 top-3.5 text-xs text-slate-400">원</span>
 </div>
 <span class="text-[11px] text-slate-400 mt-0.5 block">사업소득 4천만원 이하 시 최대 500만원 소득공제</span>
@@ -498,7 +498,7 @@
     function parseNum(val) {
       if (!val) return 0;
       const clean = String(val).replace(/[^0-9]/g, '');
-      return clean ? parseInt(clean, 10) : 0;
+      return clean ? Math.max(0, parseInt(clean, 10) || 0) : 0;
     }
 
     function formatKRW(num) {
